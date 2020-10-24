@@ -26,7 +26,9 @@ pipeline {
                 sh 'echo "Fail!; exit 1'
             }
         }
-        post {
+    }
+
+            post {
             always {
                 echo 'This will always run'
             }
@@ -44,5 +46,4 @@ pipeline {
                 echo 'For example, pipeline was previously failing but now succeding'
             }
         }
-    }
 }
