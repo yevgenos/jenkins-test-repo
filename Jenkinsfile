@@ -26,20 +26,20 @@ pipeline {
                 sh 'echo "Fail!; exit 1'
             }
         }
-        post{
-            always{
+        post {
+            always {
                 echo 'This will always run'
             }
-            success{
+            success {
                 echo 'This will only run when successful'
             }
-            failure{
+            failure {
                 echo 'This will only run when failed'
             }
-            unstable{
+            unstable {
                 echo 'This will only run if the build is unstable'
             }
-            changed{
+            changed {
                 echo 'This will run if a stage of the build has changed'
                 echo 'For example, pipeline was previously failing but now succeding'
             }
